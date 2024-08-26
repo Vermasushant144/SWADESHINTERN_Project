@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsors and Partners</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contai {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    
+    
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; /* Ensures the background image does not overflow the container */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title, .subtitle {
+    color: #ff6b35;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.sponsors, .partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.major-sponsors img {
+    width: 200px;
+    margin: 20px 0;
+}
+
+.sponsors img, .partners img {
+    width: 100px;
+}
+
+@media (max-width: 768px) {
+    .sponsors img, .partners img {
+        width: 80px;
+    }
+    .major-sponsors img {
+        width: 150px;
+    }
+    .title, .subtitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsors {
+        flex-direction: column;
+    }
+    .major-sponsors img {
+        width: 120px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="contai">
+        <div class="background">
+            <img src="https://img.freepik.com/free-vector/worldwide-global-map-outline-black-background_1017-46153.jpg" alt="World Map Background">
+        </div>
+        <div class="content">
+            <h2 class="title">Previous Year Sponsors</h2>
+            <div class="sponsors">
+                <img src="postman-logo.png" alt="Postman">
+                <img src="xyz-logo.png" alt=".xyz">
+            </div>
+            <div class="major-sponsors">
+                <img src="quine-logo.png" alt="Quine">
+            </div>
+            <div class="sponsors">
+                <img src="taskade-logo.png" alt="Taskade">
+                <img src="vercel-logo.png" alt="Vercel">
+            </div>
+            <h2 class="subtitle">Hiring Partners</h2>
+            <div class="partners">
+                <img src="zs-logo.png" alt="ZS">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    document.querySelectorAll('.sponsors img, .partners img, .major-sponsors img').forEach(img => {
+        img.addEventListener('mouseover', () => {
+            img.style.transform = 'scale(1.1)';
+            img.style.transition = 'transform 0.3s ease';
+        });
+    
+        img.addEventListener('mouseout', () => {
+            img.style.transform = 'scale(1)';
+        });
+    });
+    
+    document.querySelectorAll('.sponsors img, .partners img, .major-sponsors img').forEach(img => {
+        img.addEventListener('mouseover', () => {
+            img.style.transform = 'scale(1.1)';
+            img.style.transition = 'transform 0.3s ease';
+        });
+    
+        img.addEventListener('mouseout', () => {
+            img.style.transform = 'scale(1)';
+        });
+    });
+    
+    
+</script>
+</html>

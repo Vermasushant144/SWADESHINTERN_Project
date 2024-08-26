@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program</title>
+    <link rel="stylesheet" href="../project/style.css">
+</head>
+<style>
+/* Basic modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Theme specific styling */
+.summer-theme .modal-content {
+    background: linear-gradient(to right, #ff9a9e, #fecfef);
+    color: #ff6347; /* Summer colors */
+}
+
+.winter-theme .modal-content {
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+    color: #4682b4; /* Winter colors */
+}
+
+.spring-theme .modal-content {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    color: #32cd32; /* Spring colors */
+}
+
+.rain-theme .modal-content {
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+    color: #1e90ff; /* Rainy colors */
+}
+
+    
+</style>
+<body>
+    <header>
+        <h1>Projects - GSSOC'24</h1>
+    </header>
+
+    <div class="projects-container">
+        <!-- Example project card -->
+        <div class="project-card" onclick="openModal('resume-scan', 'summer')">
+            <h3>Summer Of Code</h3>
+            <p>By Resume Scan</p>
+            <button class="details-btn">Project Details</button>
+        </div>
+
+        <div class="project-card" onclick="openModal('resume-scan', 'winter')">
+            <h3>Winter Of Code</h3>
+            <p>By Resume Scan</p>
+            <button class="details-btn">Project Details</button>
+        </div>
+
+        <div class="project-card" onclick="openModal('resume-scan', 'spring')">
+            <h3>Spring Of Code</h3>
+            <p>By Resume Scan</p>
+            <button class="details-btn">Project Details</button>
+        </div>
+
+        <div class="project-card" onclick="openModal('resume-scan', 'rain')">
+            <h3>Raining of Code</h3>
+            <p>By Resume Scan</p>
+            <button class="details-btn">Project Details</button>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="resume-scan" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('resume-scan')">&times;</span>
+            <h2>Resume Scan <span>By Resume Scan</span></h2>
+            <img src="repo-icon.png" alt="Repository Icon" class="repo-icon">
+            <a href="#" class="repo-link">Repository Link</a>
+            <h3>Description</h3>
+            <p>ResumeScan is an open-source web application designed to help users optimize their resumes effectively. Leveraging the powerful open-source language model, Llama2, this tool analyzes uploaded resumes and provides constructive feedback and optimization suggestions tailored to enhance job application success. This project aims to democratize access to career advancement tools by using cutting-edge AI technology in an easy-to-use, accessible format.</p>
+        </div>
+    </div>
+
+    <script src="../project/script.js"></script>
+    <script>
+
+        function openModal(modalId, theme) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'block';
+        
+            // Apply the theme class to the modal
+            modal.className = `modal ${theme}-theme`;
+        }
+        
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'none';
+        }
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.team-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.team-container h1 {
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.team-container p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.years {
+    margin-bottom: 20px;
+}
+
+.years button {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.years button:hover {
+    background-color: #d35400;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    background-color: #e67e22;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.team-member p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #d35400;
+}
+
+@media (max-width: 768px) {
+    .team-member h3 {
+        font-size: 1em;
+    }
+
+    .team-member p {
+        font-size: 0.9em;
+    }
+}

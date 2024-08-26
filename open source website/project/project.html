@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Projects - SSOC'24</h1>
+        <div class="year-buttons">
+            <button class="year-btn">2024</button>
+            <button class="year-btn">2023</button>
+            <button class="year-btn">2022</button>
+            <button class="year-btn">2021</button>
+        </div>
+        <div class="filter-buttons">
+            <button class="filter-btn">CSS</button>
+            <button class="filter-btn">HTML</button>
+            <button class="filter-btn">JavaScript</button>
+            <!-- Add more filter buttons as needed -->
+        </div>
+    </header>
+    <div class="search-bar">
+        <input type="text" placeholder="Search projects..." id="searchInput">
+    </div>
+    <div class="projects-container">
+        <!-- Example project card -->
+        <div class="project-card">
+            <h3>1. Resume Scan</h3>
+            <p>By Resume Scan</p>
+            <div class="tags">
+                <span>React</span>
+                <span>MongoDB</span>
+                <span>Express</span>
+                <span>TypeScript</span>
+            </div>
+            <button class="details-btn" onclick="openModal('resume-scan')">Project Details</button>
+        </div>
+        <div class="project-card">
+            <h3>1. Resume Scan</h3>
+            <p>By Resume Scan</p>
+            <div class="tags">
+                <span>React</span>
+                <span>MongoDB</span>
+                <span>Express</span>
+                <span>TypeScript</span>
+            </div>
+            <button class="details-btn" onclick="openModal('resume-scan')">Project Details</button>
+        </div>
+        <div class="project-card">
+            <h3>1. Resume Scan</h3>
+            <p>By Resume Scan</p>
+            <div class="tags">
+                <span>React</span>
+                <span>MongoDB</span>
+                <span>Express</span>
+                <span>TypeScript</span>
+            </div>
+            <button class="details-btn" onclick="openModal('resume-scan')">Project Details</button>
+        </div>
+        <div class="project-card">
+            <h3>1. Resume Scan</h3>
+            <p>By Resume Scan</p>
+            <div class="tags">
+                <span>React</span>
+                <span>MongoDB</span>
+                <span>Express</span>
+                <span>TypeScript</span>
+            </div>
+            <button class="details-btn" onclick="openModal('resume-scan')">Project Details</button>
+        </div>
+        <div class="project-card">
+            <h3>1. Resume Scan</h3>
+            <p>By Resume Scan</p>
+            <div class="tags">
+                <span>React</span>
+                <span>MongoDB</span>
+                <span>Express</span>
+                <span>TypeScript</span>
+            </div>
+            <button class="details-btn" onclick="openModal('resume-scan')">Project Details</button>
+        </div> <div class="project-card">
+            <h3>1. Resume Scan</h3>
+            <p>By Resume Scan</p>
+            <div class="tags">
+                <span>React</span>
+                <span>MongoDB</span>
+                <span>Express</span>
+                <span>TypeScript</span>
+            </div>
+            <button class="details-btn" onclick="openModal('resume-scan')">Project Details</button>
+        </div>
+        <div class="project-card">
+            <h3>1. Resume Scan</h3>
+            <p>By Resume Scan</p>
+            <div class="tags">
+                <span>React</span>
+                <span>MongoDB</span>
+                <span>Express</span>
+                <span>TypeScript</span>
+            </div>
+            <button class="details-btn" onclick="openModal('resume-scan')">Project Details</button>
+        </div>
+        <!-- Repeat project cards as needed -->
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="resume-scan" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('resume-scan')">&times;</span>
+            <h2>Resume Scan <span>By Resume Scan</span></h2>
+            <img src="repo-icon.png" alt="Repository Icon" class="repo-icon">
+            <a href="#" class="repo-link">Repository Link</a>
+            <h3>Description</h3>
+            <p>ResumeScan is an open-source web application designed to help users optimize their resumes effectively. Leveraging the powerful open-source language model, Llama2, this tool analyzes uploaded resumes and provides constructive feedback and optimization suggestions tailored to enhance job application success. This project aims to democratize access to career advancement tools by using cutting-edge AI technology in an easy-to-use, accessible format.</p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
