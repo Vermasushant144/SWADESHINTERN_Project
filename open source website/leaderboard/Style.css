@@ -13,6 +13,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    position: relative; /* Make sure the container has relative positioning */
 }
 
 h1 {
@@ -22,21 +23,44 @@ h1 {
 
 .top-performers {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center-aligns the top performers */
     margin-bottom: 30px;
-    animation: fadeIn 1.5s ease-in-out;
+    position: relative; /* Ensure the container is positioned relatively */
 }
 
 .performer {
     text-align: center;
+    position: relative;
     animation: bounceIn 1s ease;
 }
 
 .performer img {
     border-radius: 50%;
     border: 2px solid #e67e22;
-    width: 100px;
-    height: 100px;
+    width: 80px; /* Default size for 2nd and 3rd positions */
+    height: 80px;
+    transition: width 0.3s ease, height 0.3s ease; /* Smooth transition for size changes */
+}
+
+.performer:nth-child(1) img {
+    width: 120px; /* Larger size for 1st position */
+    height: 120px;
+}
+
+/* Positioning for 1st, 2nd, and 3rd performers */
+.performer:nth-child(1) {
+    z-index: 3; /* Ensure it stays on top */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.performer:nth-child(2) {
+    margin-right: 150px; /* Increase space between 2nd and center */
+}
+
+.performer:nth-child(3) {
+    margin-left: 150px; /* Increase space between 3rd and center */
 }
 
 table {
@@ -102,6 +126,22 @@ i {
 @media (max-width: 768px) {
     .top-performers {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .performer {
+        position: static;
+        margin-bottom: 20px; /* Space between performers in mobile view */
+    }
+
+    .performer img {
+        width: 100px; /* Adjust size for mobile view */
+        height: 100px;
+    }
+
+    .performer:nth-child(1) img {
+        width: 140px; /* Adjust larger size for mobile view */
+        height: 140px;
     }
 
     table, thead, tbody, th, td, tr {

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Users</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form id="add-user-form">
+        <input type="text" id="github_username" placeholder="GitHub Username" required>
+        <input type="number" id="prs" placeholder="PRs" required>
+        <input type="number" id="score" placeholder="Score" required>
+        <button type="submit">Add User</button>
+    </form>
+
+    <script>
+        $('#add-user-form').on('submit', function (e) {
+            e.preventDefault();
+
+            const username = $('#github_username').val();
+            const prs = $('#prs').val();
+            const score = $('#score').val();
+
+            $.ajax({
+                url: "http://localhost:8000/api/leaderboard/",
+                method: "POST",
+                data: JSON.stringify({
+                    GitHub_Username: username,
+                    PRs: prs,
+                    Score: score
+                }),
+                contentType: "application/json",
+                dataType: "json",  // Ensure response is interpreted as JSON
+                success: function (response) {
+                    alert(response.message);
+                    fetchLeaderboard();  // Refresh the leaderboard after adding a user
+                },
+                error: function (error) {
+                    console.error("Error adding user:", error);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
