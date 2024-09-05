@@ -17,7 +17,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #e67e22;
+    color: #1400c7;
 }
 
 .top-performers {
@@ -34,7 +34,7 @@ h1 {
 
 .performer img {
     border-radius: 50%;
-    border: 2px solid #e67e22;
+    border: 2px solid #1400c7;
     width: 100px;
     height: 100px;
 }
@@ -46,7 +46,7 @@ table {
 }
 
 thead {
-    background-color: #e67e22;
+    background-color: #1400c7;
     color: #fff;
 }
 
@@ -62,7 +62,7 @@ tbody tr:hover {
 }
 
 i {
-    color: #e67e22;
+    color: #1400c7;
 }
 
 @keyframes fadeIn {
