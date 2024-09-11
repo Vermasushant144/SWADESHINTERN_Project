@@ -17,7 +17,7 @@ body {
 }
 
 .team-container h1 {
-    color: #e67e22;
+    color: #1400c7;
     margin-bottom: 10px;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .years button {
-    background-color: #e67e22;
+    background-color: #1400c7;
     color: white;
     padding: 10px 20px;
     margin: 5px;
@@ -53,7 +53,7 @@ body {
 }
 
 .team-member {
-    background-color: #e67e22;
+    background-color: #1400c7;
     color: white;
     padding: 15px;
     border-radius: 10px;
