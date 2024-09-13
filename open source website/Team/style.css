@@ -22,9 +22,10 @@ body {
 }
 
 .team-container p {
-    color: #333;
+    color: white;
     margin-bottom: 20px;
     font-size: 1.2em;
+    font-size: medium;
 }
 
 .years {
