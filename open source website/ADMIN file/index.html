@@ -8,20 +8,151 @@
 </head>
 <body>
     <div class="container">
-        
-        <div class="card">Home</div>
-        <div class="card">About</div>
-        <div class="card">Blog</div>
-        <div class="card">Project</div>
-        <div class="card">Sponsor</div>
-        <div class="card">LeaderBoard</div>
-        <div class="card">Team</div>
-        <div class="card">Program</div>
-        <div class="card">FAQ</div>
+        <div class="card" data-form="home-form">Home</div>
+        <div class="card" data-form="about-form">About</div>
+        <div class="card" data-form="blog-form">Blog</div>
+        <div class="card" data-form="project-form">Project</div>
+        <div class="card" data-form="sponsor-form">Sponsor</div>
+        <div class="card" data-form="leaderboard-form">LeaderBoard</div>
+        <div class="card" data-form="team-form">Team</div>
+        <div class="card" data-form="program-form">Program</div>
+        <div class="card" data-form="faq-form">FAQ</div>
     </div>
-    <div id="dropdown" class="dropdown">
-        <p id="dropdown-content">Click on a card to see details here.</p>
+
+    <!-- Modal for different forms -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <!-- Home Form -->
+            <form id="home-form" class="form" style="display:none;">
+                <h2>Home Form</h2>
+                <label for="home-name">Year:</label>
+                <input type="text" id="home-name" name="name" required><br><br>
+                <label for="home-name">Register data:</label>
+                <input type="text" id="home-name" name="Registrations" placeholder="Registrations"><br><br>
+                <input type="text" id="home-name" name="Registrations" placeholder="Participants"><br><br>
+                <input type="text" id="home-name" name="Registrations" placeholder="Countries"><br><br>
+                <input type="text" id="home-name" name="Registrations" placeholder="Total PRs"><br><br>
+                <input type="text" id="home-name" name="Registrations" placeholder="Projects"><br><br>
+
+                
+                <label for="home-name">Banner:</label>
+                <input type="file" id="home-name" name="name" placeholder="upload first banner"  required><br><br>
+                <input type="file" id="home-name" name="name" placeholder="upload second banner"  required><br><br>
+                <input type="file" id="home-name" name="name" placeholder="upload third banner"  required><br><br>
+
+
+                <label for="home-name">Start your Journey:</label>
+                <input type="text" id="home-name" name="name" required><br><br>
+
+                <label for="home-name">Lead the Pack:</label>
+                <input type="text" id="home-name" name="name" required><br><br>
+
+                <label for="home-name">Inviting Projects & NGOs:</label>
+                <input type="text" id="home-name" name="name" required><br><br>
+
+                <label for="home-name">Add a Shade to SWADESHINTERN SOC:</label>
+                <input type="text" id="home-name" name="name" required><br><br>
+
+                <label for="home-name">Time-Line:</label>
+                <input type="text" id="home-name" name="name"  placeholder="first-date" required><br><br>
+
+                <input type="text" id="home-name" name="name" placeholder="second-date" required><br><br>
+
+                <input type="text" id="home-name" name="name"  placeholder="third-date" required><br><br>
+
+                <input type="text" id="home-name" name="name" placeholder="fourth-date"required><br><br>
+
+                <input type="text" id="home-name" name="name" placeholder="fifth-date"required><br><br>
+
+                
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- About Form -->
+            <form id="about-form" class="form" style="display:none;">
+                <h2>About Form</h2>
+                <label for="about-name">Name:</label>
+                <input type="text" id="about-name" name="name" required><br><br>
+                <label for="about-email">Email:</label>
+                <input type="email" id="about-email" name="email" required><br><br>
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Blog Form -->
+            <form id="blog-form" class="form" style="display:none;">
+                <h2>Blog Form</h2>
+                <label for="blog-name">Name:</label>
+                <input type="text" id="blog-name" name="name" required><br><br>
+                <label for="blog-email">Email:</label>
+                <input type="email" id="blog-email" name="email" required><br><br>
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Project Form -->
+            <form id="project-form" class="form" style="display:none;">
+                <h2>Project Form</h2>
+                <label for="project-name">Project Title:</label>
+                <input type="text" id="project-name" name="project-title" required><br><br>
+                <label for="project-description">Description:</label>
+                <textarea id="project-description" name="description" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Sponsor Form -->
+            <form id="sponsor-form" class="form" style="display:none;">
+                <h2>Sponsor Form</h2>
+                <label for="sponsor-name">Name:</label>
+                <input type="text" id="sponsor-name" name="name" required><br><br>
+                <label for="sponsor-company">Company:</label>
+                <input type="text" id="sponsor-company" name="company" required><br><br>
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- LeaderBoard Form -->
+            <form id="leaderboard-form" class="form" style="display:none;">
+                <h2>LeaderBoard Form</h2>
+                <label for="leaderboard-name">Name:</label>
+                <input type="text" id="leaderboard-name" name="name" required><br><br>
+                <label for="leaderboard-position">Position:</label>
+                <input type="text" id="leaderboard-position" name="position" required><br><br>
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Team Form -->
+            <form id="team-form" class="form" style="display:none;">
+                <h2>Team Form</h2>
+                <label for="team-name">Team Name:</label>
+                <input type="text" id="team-name" name="team-name" required><br><br>
+                <label for="team-members">Members:</label>
+                <textarea id="team-members" name="team-members" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Program Form -->
+            <form id="program-form" class="form" style="display:none;">
+                <h2>Program Form</h2>
+                <label for="program-name">Program Name:</label>
+                <input type="text" id="program-name" name="program-name" required><br><br>
+                <label for="program-description">Description:</label>
+                <textarea id="program-description" name="description" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- FAQ Form -->
+            <form id="faq-form" class="form" style="display:none;">
+                <h2>FAQ Form</h2>
+                <label for="faq-question">Your Question:</label>
+                <input type="text" id="faq-question" name="question" required><br><br>
+                <label for="faq-answer">Your Answer:</label>
+                <textarea id="faq-answer" name="answer" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
